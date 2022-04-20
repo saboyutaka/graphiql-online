@@ -186,6 +186,7 @@ const graphQLFetcherFinal = (graphQLParams, url, headers) => {
   return fetch(url, {
     method: 'POST',
     headers: getHeadersAsJSON(headers),
+    credentials: 'include',
     body: JSON.stringify(graphQLParams),
   }).then(response => response.json());
 };
